@@ -77,6 +77,11 @@ var startYear;
 
 })
 
+	$('#clear-re').on('click', function(event) {
+		event.preventDefault();
+		$(".articleDiv").empty();
+	});
+
 });
 
 
