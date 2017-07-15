@@ -4,8 +4,10 @@ $(document).ready(function() {
 
 
 	$('#submit').on('click', function(event) {
+
 		event.preventDefault();
 
+	$(".articleDiv").empty();
 	searchTerm = $('#searchTerm').val()
 	console.log(searchTerm)
 	limit = $('#limit').val();
@@ -36,6 +38,7 @@ $(document).ready(function() {
 			currentSection = currentArticle.section_name;
 			currentPubDate = currentArticle.pub_date;
 			currentUrl = currentArticle.web_url;
+			currentNumber = i + 1;
 
 			// console.log(currentArticle);
 			console.log(currentTitle);
@@ -44,12 +47,12 @@ $(document).ready(function() {
 			console.log(currentPubDate);
 
 			var newDiv = $("<div>");
-			var articleTitle = $("<p>" + i+1 + currentTitle + "</p>");
+			var articleTitle = $("<p>" + currentNumber + " " + currentTitle + "</p>");
 			var articleSection = $("<p>Section: " + currentSection + "</p>");
 			var articlePubDate = $("<p>" + currentPubDate + "</p>");
-			var articleUrl = $("<a href='" + currentUrl + "'>");
+			var articleUrl = $("<a href='" + currentUrl + "'>" + currentUrl + "</a>");
 			newDiv.append(articleTitle).append(articleSection).append(articlePubDate).append(articleUrl);
-			$(".test").append(newDiv);
+			$(".articleDiv").append(newDiv);
 
 		}
 

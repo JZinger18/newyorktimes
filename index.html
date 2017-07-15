@@ -2,23 +2,37 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Ny article search</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <!-- get bootstrap outline  -->
 <!-- communicate with team in regards to names of attributes  -->
 <!-- create 3 div for each section  -->
 <!-- header div time search, second div search paramaters, third div top articles  -->
 <!-- create  search term, Number od Records to retrieve, Start year, End year -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<body>
-
-	<div class="row">
-	<div id="headerdiv" class="panel panel-primary">
-		
-
-	</div>
-	</div>
+  
+<body>	
 
 <div class="container">
+<div class="row">
+			
+
+<div class="jumbotron">
+
+
+  			<h1><span><i  class="fa fa-newspaper-o" style="font-size: 38px;" aria-hidden="true"></i></span> New York Times Search </h1>
+ <style>
+ 	.jumbotron{
+		background-color: #20315A;
+		color: white;
+ 	}
+ 
+
+ </style>
+</div>
+
+		
+</div>
 
 <div class="row">
 	<div id="searchparamater" class="panel panel-primary">
@@ -32,9 +46,9 @@
 				    <label for="search">Search Terms:</label>
 				    <input type="search" class="form-control" id="searchTerm" placeholder="search">
 				  </div>
-				  <div class="form-group">
+				  <div class="form-group" id="limit">
 				    <label for="recordslimit">Numbers of Records to Retrieve:</label>
-				    <select class="form-control" id="limit">
+				    <select class="form-control">
 					  <option>1</option>
 					  <option>5</option>
 					  <option>10</option>
@@ -44,7 +58,7 @@
 				    <input type="start" class="form-control" id="startYear" placeholder="Start">
 				     <label for="search">End Year (optional):</label>
 				    <input type="search" class="form-control" id="endYear" placeholder="End">
-				     <button type="submit" class="btn btn-default" id='submit'>Submit</button>
+				       <button type="submit" class="btn btn-default" id='submit'>Submit</button>
 				  <button type="submit" class="btn btn-default">Clear Results</button>
 				</form>
 
@@ -60,7 +74,7 @@
 		    <h3 class="panel-title">Top Articles</h3>
 		  </div>
 		  <div class="panel-body"> 
-		  	<div class="test"></div>
+		  	<div class = "articleDiv"></div>
 		  <!-- i have to have number on side, a h2 element, p element -->
 		
   		</div>
@@ -69,13 +83,7 @@
 </div>
 </div>
 
-  	<!-- jQuery CDN -->
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
- 	<!-- Bootstrap JavaScript CDN -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-  	<script src="script.js"></script>	
 
 </body>
 </html>
