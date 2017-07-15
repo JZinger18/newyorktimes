@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 
-
+var startYear;
 
 	$('#submit').on('click', function(event) {
 
@@ -15,11 +15,20 @@ $(document).ready(function() {
 	console.log(limit)
 
 
-	startYear = $('#startYear').val();
+	// startYear = $('#startYear').val();
+	if ($('#startYear').val() == "") {
+		startYear = "19890101";
+	}
+	else {
+		startYear = $('#startYear').val();
+	}
 
-
-
-	endYear = $('#endYear').val();
+	if ($('#endYear').val() == "") {
+		endYear = "20170101";
+	}
+	else {
+		endYear = $('#endYear').val();
+	}
 
 	var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
 	url += '?' + $.param({
